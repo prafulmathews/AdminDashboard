@@ -18,10 +18,26 @@ export class BoxshapeComponent {
   labelPosition: 'before' | 'after' = 'after';
   disabled = false;
   test=false;
-  constructor(private shared: ServService){}
+  constructor(public shareds: ServService){}
 
+  ngOnInit() {}
   setvalue()
   {
-    this.shared.setshared(this.test);
+    this.shareds.setshared(this.test);
+  }
+  
+  public change_test(ev: any)
+  {
+    this.shareds.test_bs=ev.target.checked;
+  }
+
+  public change_round(ev: any)
+  {
+    this.shareds.round_bs=ev.target.checked;
+  }
+
+  public change_sqaure(ev: any)
+  {
+    this.shareds.square_bs=ev.target.checked;
   }
 }

@@ -13,6 +13,8 @@ import { DefaultComponent } from './default/default.component';
 import { BoxshapeComponent } from './boxshape/boxshape.component';
 import { BotnameComponent } from './botname/botname.component';
 import { FormsModule } from '@angular/forms';
+import { BotavatarComponent } from './botavatar/botavatar.component';
+import { RuleengineComponent } from './ruleengine/ruleengine.component';
 @NgModule({
   declarations: [
     AppComponent,

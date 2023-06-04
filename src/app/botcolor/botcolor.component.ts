@@ -17,6 +17,30 @@ export class BotcolorComponent {
   indeterminate = false;
   labelPosition: 'before' | 'after' = 'after';
   disabled = false;
-  test=true;
+  test=false;
+
+  constructor(public shareds: ServService) {}
+
+  ngOnInit(){}
+
+  getvalue()
+  {
+    this.test=this.shareds.getshared();
+  }
+
+  public change_test(ev: any)
+  {
+    this.shareds.test_bs=ev.target.checked;
+  }
+
+  public change_green(ev: any)
+  {
+    this.shareds.greeen_bc=ev.target.checked;
+  }
+
+  public change_purple(ev: any)
+  {
+    this.shareds.purple_bc=ev.target.checked;
+  }
 
 }
