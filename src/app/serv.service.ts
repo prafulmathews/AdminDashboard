@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { EventEmitter } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -26,8 +28,18 @@ export class ServService {
   public rule_re=false;
   public faq_re=false;
   public ai_re=false;
+  public botname_bn="";
+  public test_box: any;
+  public test_color="red";
+  invoke_changecolor_bp=new EventEmitter();
+  subsVar!: Subscription;
+
   constructor() {}
 
+  onclick(color_name: string)
+  {
+    this.invoke_changecolor_bp.emit(color_name);
+  }
 }
 
 

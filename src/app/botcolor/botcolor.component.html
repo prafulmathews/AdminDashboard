@@ -1,5 +1,6 @@
 <html>
     <body>
+      <div class="test"></div>
         <div class="center">
             <mat-card>
                 <mat-card-content>
@@ -10,6 +11,7 @@
                     <mat-checkbox class="example-margin" [checked]="shareds.greeen_bc" (click)="change_green($event)">Green</mat-checkbox>
                     <mat-checkbox class="example-margin" [checked]="shareds.test_bs" (click)="change_test($event)">Test</mat-checkbox>
                   </section>
+                  <app-botpreview></app-botpreview>
                 </mat-card-content>
               </mat-card>              
         </div>

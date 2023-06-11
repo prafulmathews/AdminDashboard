@@ -15,6 +15,8 @@ import { BotnameComponent } from './botname/botname.component';
 import { FormsModule } from '@angular/forms';
 import { BotavatarComponent } from './botavatar/botavatar.component';
 import { RuleengineComponent } from './ruleengine/ruleengine.component';
+import { BotpreviewComponent } from './botpreview/botpreview.component';
+import { ServService } from './serv.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,9 +30,9 @@ import { RuleengineComponent } from './ruleengine/ruleengine.component';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
   ],
-  providers: [],
+  providers: [ServService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

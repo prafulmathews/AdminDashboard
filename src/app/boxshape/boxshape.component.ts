@@ -34,10 +34,12 @@ export class BoxshapeComponent {
   public change_round(ev: any)
   {
     this.shareds.round_bs=ev.target.checked;
+    this.shareds.square_bs=false;
   }
 
   public change_sqaure(ev: any)
   {
     this.shareds.square_bs=ev.target.checked;
+    this.shareds.round_bs=false;
   }
 }
